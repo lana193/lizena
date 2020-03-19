@@ -1,0 +1,10 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+}
