@@ -1,1 +1,0 @@
-{"version":3,"sources":["projects.css"],"names":[],"mappings":"AAAA,UAGI,WACJ,CAEA,iBALI,YAAa,CACb,cAOJ","file":"3.43ef3fcb.chunk.css","sourcesContent":[".projects {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 10%;\r\n}\r\n\r\n.photo {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}"]}

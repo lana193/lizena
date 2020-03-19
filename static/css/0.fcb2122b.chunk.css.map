@@ -1,0 +1,1 @@
+{"version":3,"sources":["Home.css"],"names":[],"mappings":"AAAA,MACI,UAAW,CACX,oDAEJ","file":"0.fcb2122b.chunk.css","sourcesContent":[".main {\r\n    width: 100%;\r\n    background-image: url(http://www.example.com/bck.png);\r\n    /* position: absolute; */\r\n}"]}
