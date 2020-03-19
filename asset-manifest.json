@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/lana193/lizena.git/static/css/main.0cfbd790.chunk.css",
+    "main.js": "/lana193/lizena.git/static/js/main.4f1c74c4.chunk.js",
+    "main.js.map": "/lana193/lizena.git/static/js/main.4f1c74c4.chunk.js.map",
+    "runtime-main.js": "/lana193/lizena.git/static/js/runtime-main.ff0ca207.js",
+    "runtime-main.js.map": "/lana193/lizena.git/static/js/runtime-main.ff0ca207.js.map",
+    "static/css/2.3b6f1bda.chunk.css": "/lana193/lizena.git/static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.da127101.chunk.js": "/lana193/lizena.git/static/js/2.da127101.chunk.js",
+    "static/js/2.da127101.chunk.js.map": "/lana193/lizena.git/static/js/2.da127101.chunk.js.map",
+    "static/css/3.43ef3fcb.chunk.css": "/lana193/lizena.git/static/css/3.43ef3fcb.chunk.css",
+    "static/js/3.616bd792.chunk.js": "/lana193/lizena.git/static/js/3.616bd792.chunk.js",
+    "static/js/3.616bd792.chunk.js.map": "/lana193/lizena.git/static/js/3.616bd792.chunk.js.map",
+    "static/css/4.43ef3fcb.chunk.css": "/lana193/lizena.git/static/css/4.43ef3fcb.chunk.css",
+    "static/js/4.62b5770e.chunk.js": "/lana193/lizena.git/static/js/4.62b5770e.chunk.js",
+    "static/js/4.62b5770e.chunk.js.map": "/lana193/lizena.git/static/js/4.62b5770e.chunk.js.map",
+    "index.html": "/lana193/lizena.git/index.html",
+    "precache-manifest.6d85024845fbea78b6a8ce3cee9a0555.js": "/lana193/lizena.git/precache-manifest.6d85024845fbea78b6a8ce3cee9a0555.js",
+    "service-worker.js": "/lana193/lizena.git/service-worker.js",
+    "static/css/2.3b6f1bda.chunk.css.map": "/lana193/lizena.git/static/css/2.3b6f1bda.chunk.css.map",
+    "static/css/3.43ef3fcb.chunk.css.map": "/lana193/lizena.git/static/css/3.43ef3fcb.chunk.css.map",
+    "static/css/4.43ef3fcb.chunk.css.map": "/lana193/lizena.git/static/css/4.43ef3fcb.chunk.css.map",
+    "static/css/main.0cfbd790.chunk.css.map": "/lana193/lizena.git/static/css/main.0cfbd790.chunk.css.map",
+    "static/js/2.da127101.chunk.js.LICENSE.txt": "/lana193/lizena.git/static/js/2.da127101.chunk.js.LICENSE.txt",
+    "static/media/background.jpg": "/lana193/lizena.git/static/media/background.fd3ac6ed.jpg",
+    "static/media/logo.jpg": "/lana193/lizena.git/static/media/logo.a60e4ff6.jpg",
+    "static/media/project-photo.jpg": "/lana193/lizena.git/static/media/project-photo.3be8e732.jpg",
+    "static/media/project.jpg": "/lana193/lizena.git/static/media/project.9ee01838.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff0ca207.js",
+    "static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.da127101.chunk.js",
+    "static/css/main.0cfbd790.chunk.css",
+    "static/js/main.4f1c74c4.chunk.js"
+  ]
+}
