@@ -11,7 +11,7 @@ const sectionStyle = {
 
 const Home = () => {
     return (
-        <div>
+        <div className='pt5'>
             <div style={sectionStyle}>
             {/* <img className='' src={background} alt='Background' /> */}
             <h1 className='f2 f1-l lh-title mt0 mb4 mb5-ns white'>Будівельно-ремонтна компанія ЛІЗЕНА</h1>

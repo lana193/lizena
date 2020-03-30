@@ -1,0 +1,34 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background-color: white;
+    position: fixed;
+
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 2rem; */
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 0 2rem; */
+    /* align-content: right; */
+}
+
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    margin-top: 53px;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-right: 0;
+    padding: 0;
+    width: 100vw;
+}
