@@ -3,7 +3,7 @@ import ServicesTable from './ServicesTable';
 
 const Services = () => {
     return (
-        <div className='tc mt5'>
+        <div className='tc pt6'>
                     <div>
             Ми надаємо широкий спектр будівельних послуг...
         </div>

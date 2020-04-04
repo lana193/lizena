@@ -6,7 +6,7 @@ import './projects.css';
 
 const Project = () => {
     return(
-        <div className='mt5 mb3'>
+        <div className='mb3 pt6'>
             <a className='background f6 link dim ba ph3 pv2 mb2 dib dark-green bg-white' href="#0"> Тут буде назва проєкту</a>
             <p>Опис проєкту...</p>
             <h3>Галерея </h3>
