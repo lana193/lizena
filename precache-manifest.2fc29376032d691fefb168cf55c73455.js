@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a354c92588cc93552670dc718d87bc6f",
+    "revision": "150bfffbb046b44f0f6a2b9bb1da197a",
     "url": "/lizena/index.html"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lizena/static/css/4.0988ea1f.chunk.css"
   },
   {
-    "revision": "5cbfa5f67fccdc608711",
-    "url": "/lizena/static/css/5.f64fa607.chunk.css"
+    "revision": "18a38e6e3e9decd2ff7f",
+    "url": "/lizena/static/css/5.289e5d4f.chunk.css"
   },
   {
-    "revision": "96511fe8b08168b26e9d",
-    "url": "/lizena/static/css/6.43ef3fcb.chunk.css"
+    "revision": "c4444860cac06d0bf846",
+    "url": "/lizena/static/css/6.8af647bb.chunk.css"
   },
   {
     "revision": "347aef770f03bd4c61bd",
@@ -36,24 +36,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lizena/static/js/4.8c0effe2.chunk.js"
   },
   {
-    "revision": "5cbfa5f67fccdc608711",
-    "url": "/lizena/static/js/5.25c226cc.chunk.js"
+    "revision": "18a38e6e3e9decd2ff7f",
+    "url": "/lizena/static/js/5.79e3f2fe.chunk.js"
   },
   {
-    "revision": "96511fe8b08168b26e9d",
-    "url": "/lizena/static/js/6.45d24950.chunk.js"
+    "revision": "c4444860cac06d0bf846",
+    "url": "/lizena/static/js/6.fa43afa2.chunk.js"
   },
   {
-    "revision": "d6a1fd486f1034cdbdd2",
-    "url": "/lizena/static/js/7.0c1b659d.chunk.js"
+    "revision": "60279afc7eedb3159fe1",
+    "url": "/lizena/static/js/7.77e4df84.chunk.js"
   },
   {
     "revision": "37c2dd765754951ad204",
     "url": "/lizena/static/js/main.39b87cd5.chunk.js"
   },
   {
-    "revision": "30447fd7cf795ba1be64",
-    "url": "/lizena/static/js/runtime-main.334667e3.js"
+    "revision": "a1ee141ac693911a1e41",
+    "url": "/lizena/static/js/runtime-main.c0a7d738.js"
   },
   {
     "revision": "a60e4ff6236cc515c48258a257a01e71",
