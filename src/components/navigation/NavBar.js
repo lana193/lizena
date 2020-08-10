@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
-import logo from './logo.jpg';
+import logo from './logo.png';
 import { Link } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 
-import { OpenMenuIcon, CloseMenuIcon } from '../../icons/Icons';
-import { LinkElement } from '../../elements/LinkElement';
+import { HomeIcon, OpenMenuIcon, CloseMenuIcon } from '../../icons/Icons';
 
 const NavBarContainer = styled.nav`
+    z-index: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.3em 1.5em 0.3em 1.5em;
     background-color: white;
     position: fixed;
 
     .nav-left {
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
+        align-items: center;
     }
     
     .nav-right {
         display: flex;
         justify-content: flex-end;
+
+        .logo-wrapper {
+            height: 70px;
+            width: 180px;
+            background-image: url(${logo});
+            background-size: 140px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
     }
 
     .nav-link {
@@ -35,51 +45,46 @@ const NavBarContainer = styled.nav`
         font-weight: 600;
         letter-spacing: 0px;
         opacity: 0,7;
-        padding-top: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     
-    
     .nav-link:hover {
-        // color: ${props => props.theme.colors.mediumseagreen };
         border-top: 2px solid rgb(0, 197, 105);
         color: rgb(0, 197, 105);
     }
 
     .nav-link:active {
-        // color: ${props => props.theme.colors.mediumseagreen };
         border-top: 2px solid rgb(0, 197, 105);
         color: rgb(0, 197, 105);
     }
 
     .mobile-menu {
         display: flex;
-        position: fixed;
-        margin-top: 53px;
-        /* height: calc(100vh - 70px); */
+        position: absolute;
+        margin-top: 43px;
+        margin-right: -1.5rem;
         flex-direction: column;
         flex-wrap: wrap;
-        padding: 0;
         width: 100vw;
         background-color: #f9f9f9;
         opacity: 1;
+        border-top: 1px solid 	rgb(143,188,143, 1);
         
         .mobile-nav-link {
+            width: 100%;
             color: rgba(47,79,79,0.8);
             font-size: 12px;
-            // border-color: #dadada;
             height: 35px;
             line-height: 35px;
             border-bottom: 0.1px solid 	rgb(143,188,143, 1);
             text-transform: uppercase;
-            // font-family: 'Raleway, sans-serif';
             font-family: 'Source Sans Pro',sans-serif;
-            // letter-spacing: 1px;
             padding: 0.5em 2em 0.5em 2em;
             font-size: 15px;
-            font-weight: 100;
+            font-weight: 100vw;
             height: 50px;
             vertical-align: middle;   
-
         }
 
         .mobile-nav-link:active {
@@ -94,43 +99,42 @@ const NavBar = () => {
     const [ showMobileMenu, setShowMobileMenu ] = useState(false);
     return (
         <NavBarContainer >
-             <div className='nav-left v-mid pl4'>
-                <Link to='/' className='v-mid mid-gray link'>
-                    <img src={logo} className="w2 h2 br-100" alt="Site Name" />
-                </ Link>
-                <div className='pl2'>097000 00 00 <br />097000 00 00</div>
+            <div className='nav-left'>
+                <Link to='/' className =''>
+                    <HomeIcon alt='Головна'/>
+                </Link>         
+                <div className='phone_wrapper'>
+                    +38 (067) 90 44 630, <br/>
+                    +38 (097) 66 08 663
+                </div>
             </div>
             { isMobile ? 
-                <div className='nav-right v-mid'>
-                    <div onClick={() => setShowMobileMenu(!showMobileMenu)} className ='link dim dark-gray f6 f5-ns pr4'>
+                <div className='nav-right'>
+                    <div onClick={() => setShowMobileMenu(!showMobileMenu)} className =''>
                         { showMobileMenu ? 
-                            <div className='pt2'>
                                <CloseMenuIcon />
-                            </div> 
                             :
                             <OpenMenuIcon /> 
                         }     
                     </div>
+                
                     { showMobileMenu && 
                         <div className='mobile-menu'>
-                            {/* <LinkElement name={'Проєкти'} nav={'/projects'} /> */}
-                            <Link to='/projects' className ='mobile-nav-link'>Проєкти</Link>
+                            <Link to='/for-sale' className ='mobile-nav-link'>Об'єкти під продаж</Link>
+                            <Link to='/projects' className ='mobile-nav-link'>Наші роботи</Link>
                             <Link to='/services' className ='mobile-nav-link'>Послуги та розцінки</Link>
-                            <Link to='' className ='mobile-nav-link'>Відгуки</Link>
-                            <Link to='' className ='mobile-nav-link'>Контакти</Link>
+                            <Link to='/contacts' className ='mobile-nav-link'>Контакти</Link>
                         </div>
                     }
-                    </div>
+                </div>
                 : 
-                <div className ='nav-right v-mid'>
-                    {/* <LinkElement name={'Проєкти'} nav={'/projects'} /> */}
-                    <Link to='/projects' className ='nav-link'>Проєкти</Link>
+                <div className ='nav-right'>
+                    <Link to='/for-sale' className ='nav-link'>Об'єкти під продаж</Link>
+                    <Link to='/projects' className ='nav-link'>Наші роботи</Link>
                     <Link to='/services' className ='nav-link'>Послуги та розцінки</Link>
-                    <Link to='' className ='nav-link'>Відгуки</Link>
-                    <Link to='' className ='nav-link'>Контакти</Link>
+                    <Link to='/contacts' className ='nav-link'>Контакти</Link>
                 </div>
             }
-            
         </NavBarContainer>
     ) 
 }

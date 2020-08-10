@@ -1,18 +1,42 @@
 import React from 'react';
-import project from './project.jpg';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = () => {
+import styled from 'styled-components';
+
+const ProjectCardContainer = styled.div`
+  width: 320px;
+  height: 300px;
+  background-image: url('${props => props.imageUrl}');
+  background-size: 100% 100%;
+  border-radius: 2%;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 10px -3px rgb(60, 179, 113);
+
+  .project-link-wrapper {
+    padding: 10px 20px;
+    width: 320px;
+
+    .project-link {
+      color: white;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .project-link-wrapper:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+`;
+
+const ProjectCard = (props) => {
   return(
-    <article class='bg-white center mw5 ba b--black-10 mv4 br4 shadow-5'>
-      <div class="pv2 ph3">
-        <h1 class="f6 ttu tracked">Назва проєкту</h1>
+    <ProjectCardContainer imageUrl={props.main_image}>
+      <div className='project-link-wrapper'>
+        <Link className='project-link' to={`/projects/project/${props._id}`}>{props.project_name}</Link>
       </div>
-      <img src={project} class="w-100 db" alt='Project item'/>
-      <div class="pa3">
-        <Link to='./projects/project' class="link dim lh-title">Детальніше про проєкт</Link>
-      </div>
-    </article>
+    </ProjectCardContainer>
   );
 }
 

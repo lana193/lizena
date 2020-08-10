@@ -1,22 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Icon = styled.svg`
     .cls-1{
-        fill:#111;
+        fill: rgba(71, 71, 71, 0.8);
     }
+    // .cls-2{
+    //     fill:#00c569;
+    // }
     .cls-2{
-        fill:#00c569;
+        fill: rgba(71, 71, 71, 0.8);
     }
+`;
+
+
+const StyledCloseMenuIcon = styled.svg`
+    .cls-1{
+        fill: rgba(71, 71, 71, 0.8);
+    }
+    // .cls-2{
+    //     fill:#00c569;
+    // }
+    .cls-2{
+        fill: rgba(71, 71, 71, 0.8);
+    }
+    margin-top: 0.5em;
 `;
 
 export const CloseMenuIcon = () => {
     return (
-        <svg version="1.1" fill="#000000" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" width="25px" height="20px">
+        <StyledCloseMenuIcon version="1.1" fill="#000000" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" width="35px" height="18px">
             <g>
                 <path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"/>
             </g>
-        </svg>
+        </StyledCloseMenuIcon>
     );
 }
 
@@ -76,6 +93,14 @@ export const TimeIcon = () => {
     
 }
 
+export const ComfortIcon = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="50px" height="50px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+            <path fill="#00c569" d="M448 242.025V152a48.055 48.055 0 0 0-48-48H112a48.055 48.055 0 0 0-48 48v90.025A64.115 64.115 0 0 0 16 304v112a32.036 32.036 0 0 0 32 32h16v48h32v-48h320v48h32v-48h16a32.036 32.036 0 0 0 32-32V304a64.115 64.115 0 0 0-48-61.975zM112 416H48V304a32 32 0 0 1 64 0zm256 0H144v-96h224zm2.025-128h-228.05A64.243 64.243 0 0 0 96 242.025V152a16.019 16.019 0 0 1 16-16h288a16.019 16.019 0 0 1 16 16v90.025A64.243 64.243 0 0 0 370.025 288zM464 416h-64V304a32 32 0 0 1 64 0l.02 112z"/>
+        </svg>
+    );
+}
+
 export const TargetIcon = () => {
     return (
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" enableBackground="new 0 0 470 470" fill='#00c569' width='65px' height='65px'>
@@ -84,3 +109,244 @@ export const TargetIcon = () => {
 
     )
 }
+
+
+export const LocationIcon = () => {
+    return (
+        <Icon xmlns="http://www.w3.org/2000/svg" width='15' height="15.11" viewBox="0 0 35 50.11">
+            <title>Address</title>
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Address">
+                    <path className='cls-1' d="M25.68 35a2.5 2.5 0 0 0 3.43-1C32.33 27.75 35 21.33 35 17.5a17.5 17.5 0 0 0-35 0C0 25 10.87 42.47 15.71 49a2.77 2.77 0 0 0 4.49-.06c1.07-1.53 2.44-3.64 3.93-6.08a2.52 2.52 0 0 0-.93-3.49 2.51 2.51 0 0 0-3.34.9c-.67 1.1-1.33 2.16-2 3.16C12.17 35.13 5 22.2 5 17.5a12.5 12.5 0 0 1 25 0c0 2.77-2.32 8.36-5.33 14.18a2.51 2.51 0 0 0 1 3.34z"/>
+                    <path className="cls-2" d="M17.5 14a3.5 3.5 0 1 1-3.5 3.5 3.5 3.5 0 0 1 3.5-3.5m0-5a8.5 8.5 0 1 0 8.5 8.5A8.51 8.51 0 0 0 17.5 9z"/>
+                </g>
+            </g>
+        </Icon>
+    );
+}
+
+export const EmailIcon = () => {
+    return (
+        <Icon xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 50 36">
+            <title>The_envelope</title>
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="The_envelope">
+                    <path className="cls-1" d="M25.82 23.62l11-8.89a2.49 2.49 0 0 0 .79-3.44 2.5 2.5 0 0 0-3.44-.8l-11 8.89a2.49 2.49 0 0 0-.8 3.44 2.49 2.49 0 0 0 3.45.8z"/>
+                    <path className="cls-2" d="M25.82 19.38l-11-8.89a2.5 2.5 0 0 0-3.44.8 2.49 2.49 0 0 0 .79 3.44l11 8.89a2.5 2.5 0 0 0 2.64-4.24z"/>
+                    <path className="cls-2" d="M41.78 0H8.22A8.22 8.22 0 0 0 0 8.22v19.56A8.22 8.22 0 0 0 8.22 36h33.56A8.22 8.22 0 0 0 50 27.78V8.22A8.22 8.22 0 0 0 41.78 0zM45 27.78A3.22 3.22 0 0 1 41.78 31H8.22A3.22 3.22 0 0 1 5 27.78V8.22A3.22 3.22 0 0 1 8.22 5h33.56A3.22 3.22 0 0 1 45 8.22z"/>
+                </g>
+            </g>
+        </Icon>
+    );
+}
+
+export const PhoneIcon = () => {
+    return (
+        <Icon xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 33.83 50.03">
+            <title>Phone</title>
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Phone">
+                    <path className="cls-1" d="M32.57 40l-9.23-10.52a4.18 4.18 0 0 0-4.14-1.32l-.76.18a1.73 1.73 0 0 1-2-1 19.94 19.94 0 0 1-1.31-4.51 1.31 1.31 0 0 1 1-1.47A4.17 4.17 0 0 0 19 19a4.25 4.25 0 0 0 .33-2l-.95-12.3A5.05 5.05 0 0 0 11.77.24L5 2.84A6.91 6.91 0 0 0 .26 8.73C-1.2 22.21 3.58 37.37 13.78 47.48a2.29 2.29 0 0 0 3.66-.68l.06-.11a2.31 2.31 0 0 0-.5-2.63C8.1 35.19 3.91 22 4.84 10.21A3.66 3.66 0 0 1 7.4 7L12 5.11a1.36 1.36 0 0 1 1.75 1.19l.72 9.25a1.59 1.59 0 0 1-1.21 1.67l-1.56.38a2.43 2.43 0 0 0-1.82 2.71c.83 5.25 2 8.88 4.87 13.25a2.41 2.41 0 0 0 2.89.89l2.11-.85a1.58 1.58 0 0 1 1.8.46L28.23 42a1.35 1.35 0 0 1-.57 2.15l-3.74 1.32a2.36 2.36 0 0 0-1.35 3.25 2.35 2.35 0 0 0 2.93 1.2l5-1.8A5 5 0 0 0 32.57 40z"/>
+                    <path className="cls-2" d="M22.52 3.35a2.47 2.47 0 0 0 1.82 2.2 5 5 0 0 1 .73 9.45 2.48 2.48 0 0 0-1.46 2.47 2.52 2.52 0 0 0 3.56 2.07A10 10 0 0 0 25.72.75a2.51 2.51 0 0 0-3.2 2.6z"/>
+                </g>
+            </g>
+        </Icon>
+
+    );
+
+}
+
+// export const RightArrow = () => {
+//     return (
+//         <Icon xmlns="http://www.w3.org/2000/svg" width="50" height="47.56" viewBox="0 0 50 47.56">
+//     <title>Forward_2</title>
+//     <g id="Layer_2" data-name="Layer 2">
+//         <g id="Forward_2">
+//             <path class="cls-1" d="M49.68 21.5a1.83 1.83 0 0 1 .13.24c0 .08 0 .17.08.25a1.66 1.66 0 0 1 .06.21 2.69 2.69 0 0 1 0 1 1.29 1.29 0 0 1-.06.21c0 .09 0 .18-.08.26s-.08.16-.13.24a1.74 1.74 0 0 1-.1.19 2.52 2.52 0 0 1-.69.69l-.2.11a2.53 2.53 0 0 1-.23.12 2.58 2.58 0 0 1-.26.08l-.21.06a2 2 0 0 1-.49.05h-45a2.5 2.5 0 0 1 0-5h39L25.54 4.27A2.5 2.5 0 0 1 29.08.73l20.19 20.19a3 3 0 0 1 .31.39 1.74 1.74 0 0 1 .1.19z"/>
+//             <rect class="cls-2" x="21.45" y="34.87" width="26.73" height="5" rx="2.5" ry="2.5" transform="rotate(-45 34.822 37.376)"/>
+//             </g></g>
+//     </Icon>
+
+//     );
+// }
+
+const StyledRoundIcon = styled.svg`
+    -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); 
+    width: 45px;
+    height: 45px;
+    // fill: #626262;
+    fill: rgb(60,179,113);
+    aria-hidden: true; 
+    focusable: false; 
+    preserveAspectRatio: xMidYMid meet; 
+    
+`;
+
+const StyledSocialIcon = styled.svg`
+    -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+    width: 2em; 
+    height: 2em;
+    cursor: pointer;
+    fill: rgba(71, 71, 71, 0.8);
+    padding: 0.5em;
+    border-radius: 20%;
+
+    :hover {
+        background:  ${props => props.instagram ? props.theme.colors.instagram : props.theme.colors.facebook };
+        fill: white;
+    }
+    
+`;
+
+export const FacebookIcon = () => {
+    return (
+        <StyledSocialIcon xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+            <path className="facebook" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+        </StyledSocialIcon>
+    );
+} 
+
+
+export const InstagramIcon = () => {
+    return (
+        <StyledSocialIcon instagram xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
+            <path className="instagram" d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z" 
+            />
+            </StyledSocialIcon>
+    );
+}
+const StyledHomeIcon = styled.svg`
+    -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+    width: 35px;
+    height: 35px;
+    // fill: #626262;
+    // aria-hidden: true;
+    // focusable: false; 
+    // preserveAspectRatio: xMidYMid meet; 
+    cursor: pointer;
+    :hover {
+        fill: rgb(60,179,113);
+    }
+`;
+
+export const HomeIcon = () => {
+    return (
+        <StyledHomeIcon xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20">
+        <path d="M16 8.5l1.53 1.53l-1.06 1.06L10 4.62l-6.47 6.47l-1.06-1.06L10 2.5l4 4v-2h2v4zm-6-2.46l6 5.99V18H4v-5.97zM12 17v-5H8v5h4z" />
+    </StyledHomeIcon>
+    )
+    
+
+}
+
+export const EnvelopeRoundIcon = () => {
+    return (
+        <StyledRoundIcon viewBox='0 0 1200 1200'>
+            <path d='M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0zM292.969 367.896h614.062v86.353L600 629.297L292.969 454.248v-86.352zm0 141.577l156.372 89.136l-156.372 163.915V509.473zm614.062 0v253.052L750.659 598.608l156.372-89.135zM492.334 623.145L600 684.521l107.666-61.377l199.365 208.96H292.969l199.365-208.959z' />
+        </StyledRoundIcon>
+    );
+}
+
+export const PhoneRoundIcon = () => {
+    return (
+        <StyledRoundIcon viewBox='0 0 1200 1200'>
+            <path d='M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0zM384.375 238.33c12.362-.729 23.536 6.66 32.007 19.775l82.031 155.566c8.637 18.434 3.729 38.172-9.155 51.343l-37.573 37.573c-2.319 3.178-3.845 6.757-3.882 10.693c14.409 55.775 58.117 107.223 96.681 142.603c38.562 35.38 80.009 83.281 133.812 94.629c6.65 1.855 14.797 2.52 19.556-1.903l43.652-44.458c15.068-11.421 36.866-16.956 52.954-7.617h.732l148.021 87.378c21.728 13.619 23.979 39.944 8.423 55.957L849.683 941.016c-15.056 15.44-35.058 20.631-54.491 20.654c-85.948-2.575-167.158-44.759-233.862-88.11c-109.49-79.653-209.923-178.446-272.975-297.803c-24.182-50.05-52.589-113.91-49.878-169.774c.242-21.016 5.928-41.605 20.728-55.151l101.953-101.953c7.942-6.758 15.799-10.111 23.217-10.549z' />
+        </StyledRoundIcon>
+
+    );
+}
+
+export const LocationRoundIcon = () => {
+    return (
+        <StyledRoundIcon viewBox='0 0 1200 1200'>
+            <path d='M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0zm0 203.247c165.185 0 299.121 133.937 299.121 299.121c0 50.037-13.711 116.091-41.896 153.441L600 996.753L342.773 655.811c-31.029-41.123-41.895-98.199-41.895-153.441c.001-165.186 133.937-299.123 299.122-299.123zm0 173.291c-69.503 0-125.83 56.327-125.83 125.83s56.327 125.83 125.83 125.83s125.83-56.327 125.83-125.83s-56.327-125.83-125.83-125.83z' />
+        </StyledRoundIcon>
+    );
+}
+
+
+const StyledForSaleIcon = styled.svg`
+    z-index: 2;
+    position: absolute;
+width: 4em; 
+    height: 4em;
+    fill: black;
+    :hover {
+        fill: red;
+    }
+
+    margin-top: 200px;
+`;
+
+export const ForSaleIcon = () => {
+    return (
+        <StyledForSaleIcon xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 464 496">
+            <path d="M44 278l160 192q21 24 49 24q25 0 43-15l139-117q20-18 23-45q3-25-15-49L283 76q-26-34-68-43L76 1q-20-6-38 9L21 25Q6 36 6 61l8 143q5 43 30 74zM68 42l141 34q22 5 44 27l160 192q8 8 5 18q0 6-9 17L270 447q-7 6-17 5.5t-15-7.5L78 253q-19-24-19-49L49 57zm57 70q0 9-6 15t-15 6t-15-6t-6-15t6-15t15-6t15 6t6 15zm11 149l196 62h7q14 0 21-15q3-8-1-16t-12-11l-196-62q-8-4-16.5 0T123 231q-6 23 13 30zm160 96q0 13-9 22.5t-23 9.5t-23-9.5t-9-22.5t9.5-22.5T264 325t22.5 9.5T296 357zm-64-170q0 13-9.5 22.5T200 219t-22.5-9.5T168 187t9-22.5t23-9.5t23 9.5t9 22.5z" />
+        </StyledForSaleIcon>
+    );
+}
+
+const pulse = keyframes`
+0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 0 rgba(60,179,113, 0.7);
+}
+
+70% {
+    transform: scale(1);
+    box-shadow: 0 0 5px 20px rgba(60,179,113, 0);
+}
+
+100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 0 rgba(60,179,113, 0);
+}
+`;
+
+const StyledKeyIcon = styled.svg`
+
+	background: rgb(60,179,113);
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(60,179,113, 1);
+	margin: 10px;
+	height: 5em;
+	width: 5em;
+	transform: scale(1);
+	animation: ${pulse} 2s infinite;
+`;
+
+export const KeyIcon = () => {
+    return (
+        <StyledKeyIcon xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100.026">
+            <path fill="#0B332D" d="M50 0c27.613 0 50 22.386 50 50c0 27.615-22.387 50-50 50c-27.614 0-50-22.385-50-50S22.386 0 50 0z"/>
+            <path fill="#F0C419" d="M54 20c-14.359 0-26 11.64-26 26c0 3.887.859 7.568 2.388 10.882l-3.534 3.533c-.913.913-.86 5.54-.867 5.608c-.04.041-4.297-.443-5.235.494l-1.879 1.961c-1.196 1.197-.924 5.596-.945 5.521l-.005.006c.014.003-4.301-.357-5.217.557l-2.111 2.112c-.936.937-.696 5.353-.682 5.343c.005-.006-4.482-.14-4.953.291C1.995 85.021 0 87.27 0 87.27l.018 12.756c0 .008 12.712-.023 12.712-.023l30.388-30.391A25.885 25.885 0 0 0 54 72c14.359 0 26-11.643 26-26c0-14.359-11.641-26-26-26zm6.741 13.481a5.778 5.778 0 1 1 1.237 11.42a5.975 5.975 0 0 1-5.215-1.665a5.977 5.977 0 0 1-1.664-5.213a5.778 5.778 0 0 1 5.642-4.542z"/>
+            <path fill="#F29C1F" d="M66.652 33.314a8.019 8.019 0 0 0-11.338 0a8.02 8.02 0 0 0 0 11.337a8.015 8.015 0 0 0 11.338 0a8.016 8.016 0 0 0 0-11.337zM64.5 42.499a4.994 4.994 0 1 1-7.062-7.064a4.992 4.992 0 0 1 7.062 0a4.993 4.993 0 0 1 0 7.064zM37.864 66.378a26.11 26.11 0 0 1-2.249-1.994L.018 99.98v.043c0 .002 1.887 0 4.206-.006l33.64-33.639z"/>
+            <path fill="#EBECED" d="M75.967 0C64.055 0 54.174 8.682 52.294 20.061A26.767 26.767 0 0 1 54 20c1.089 0 2.159.075 3.212.206c1.763-8.75 9.488-15.34 18.755-15.34c10.567 0 19.135 8.565 19.135 19.134c0 10.567-8.564 19.134-19.135 19.134c-6.839 0-12.822-3.6-16.207-8.996a4.962 4.962 0 0 0-2.324 1.296a4.932 4.932 0 0 0-1.246 2.158C60.518 43.877 67.76 48 75.967 48c13.254 0 24-10.745 24-24c0-13.254-10.744-24-24-24z"/>
+            <path fill="rgb(240,255,240)" d="M61.104 36.017a19.84 19.84 0 0 1-1.344-1.879a5.423 5.423 0 0 0-.627.198l-.006.002a5.413 5.413 0 0 0-.559.259l-.287.177l-.262.168c-.188.14-.371.29-.543.458l-.074.073a5.015 5.015 0 0 0-.44.523l-.183.276l-.141.229a5.16 5.16 0 0 0-.449 1.088c.451.655.938 1.28 1.453 1.886l3.462-3.458z"/>
+            </StyledKeyIcon>
+    );
+}
+
+
+// export const RightArrow = () => {
+//     return (
+//         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
+//             <path d="M11 16.5V13H3V7h8V3.5l6.5 6.5l-6.5 6.5z" fill="white"/>
+//             </svg>
+//     );
+// }
+
+const StyledRightArrow = styled.svg`
+    margin-bottom: -7px;
+`;
+
+
+export const RightArrow = () => {
+    return (
+        <StyledRightArrow xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="2.5em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+            <path d="M50.868 78.016l36.418-26.055a2.516 2.516 0 0 0 1.051-2.043v-.006a2.52 2.52 0 0 0-1.059-2.048L50.86 21.977a2.513 2.513 0 0 0-2.612-.183a2.509 2.509 0 0 0-1.361 2.236v12.183l-32.709-.001a2.514 2.514 0 0 0-2.515 2.516l.001 22.541a2.515 2.515 0 0 0 2.516 2.516h32.706v12.187c0 .94.53 1.803 1.366 2.237a2.512 2.512 0 0 0 2.616-.193z" fill="white"/>
+        </StyledRightArrow>
+    );
+}
+
+ 
