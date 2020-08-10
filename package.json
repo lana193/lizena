@@ -29,7 +29,7 @@
     "swiper": "^5.3.6",
     "tachyons": "^4.11.1"
   },
-  "proxy": "http://localhost:3003",
+  "proxy": "https://tranquil-forest-59795.herokuapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
