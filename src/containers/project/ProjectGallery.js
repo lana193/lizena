@@ -22,6 +22,10 @@ const ProjectGalleryWrapper = styled.div`
   }
 `;
 
+const SwiperSlideWrapper = styled.div`
+  background-image: url(${props => props.background});
+`;
+
 const ProjectGallery = ({ photos = [] }) => {
   const params = {
     pagination: {
@@ -55,7 +59,7 @@ const ProjectGallery = ({ photos = [] }) => {
       <Swiper {...params}>
         {photos.map((item, i) => {
           return (
-            <div key={i} style={{ backgroundImage: `url(${item})` }} className="swiper-slide"></div>
+            <SwiperSlideWrapper key={i} background={item} className="swiper-slide"></SwiperSlideWrapper>
           );
         }
         )}

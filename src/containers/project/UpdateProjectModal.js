@@ -61,7 +61,7 @@ const UpdateProjectModal = (props) => {
     }
 
     closeModal();
-    // window.location.reload();
+    window.location.reload();
   }
 
   const initialValues = {

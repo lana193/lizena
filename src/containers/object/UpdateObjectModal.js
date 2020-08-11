@@ -68,7 +68,7 @@ const UpdateObjectModal = (props) => {
       handleUpdateObject(objectId, fd);
     }
     closeModal();
-    // window.location.reload();
+    window.location.reload();
 }
 
 const initialValues = {
