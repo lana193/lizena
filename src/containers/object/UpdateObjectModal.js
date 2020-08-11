@@ -19,7 +19,7 @@ const customStyles = {
 };
 
 const UpdateObjectModal = (props) => {
-  const { handleUpdateObject, objectId, selectedObject } = props;
+  const { handleUpdateObject, objectId, selectedObject, handleGetObject } = props;
   const [ modalIsOpen, setIsOpen ] = useState(false);
   
   const openModal= () => {
@@ -41,7 +41,7 @@ const UpdateObjectModal = (props) => {
   const handleSubmit = (values) => {
     
     if(!values.photos && !values.main_image) {
-      handleUpdateObject(objectId, values);
+      handleUpdateObject(objectId, values).then(handleGetObject(objectId));
     }
 
     else {
@@ -65,10 +65,9 @@ const UpdateObjectModal = (props) => {
         })
       } 
 
-      handleUpdateObject(objectId, fd);
+      handleUpdateObject(objectId, fd).then(handleGetObject(objectId));
     }
     closeModal();
-    // window.location.reload();
 }
 
 const initialValues = {

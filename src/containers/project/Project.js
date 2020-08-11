@@ -38,7 +38,12 @@ const Project = (props) => {
             </div>
             { currentUserToken && 
                 <div>
-                    <UpdateProjectModal handleUpdateProject={handleUpdateProject} projectId={match.params.id} selectedProject={selectedProject} />
+                    <UpdateProjectModal 
+                        handleUpdateProject={handleUpdateProject} 
+                        projectId={match.params.id} 
+                        selectedProject={selectedProject}
+                        handleGetProject={handleGetProject}
+                    />
                     <DeleteProjectModal handleDeleteProject={handleDeleteProject} projectId={match.params.id} />
                 </div>
             }

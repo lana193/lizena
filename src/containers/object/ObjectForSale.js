@@ -142,7 +142,12 @@ const ObjectForSale = (props) => {
             
             { currentUserToken && 
                 <div>
-                    <UpdateObjectModal handleUpdateObject={handleUpdateObject} objectId={match.params.id} selectedObject={selectedObject} />
+                    <UpdateObjectModal 
+                        handleUpdateObject={handleUpdateObject} 
+                        objectId={match.params.id} 
+                        selectedObject={selectedObject}
+                        handleGetObject={handleGetObject}
+                     />
                     <DeleteObjectModal handleDeleteObject={handleDeleteObject} objectId={match.params.id} />
                 </div>
             }

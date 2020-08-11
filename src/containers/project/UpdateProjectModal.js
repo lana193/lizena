@@ -17,7 +17,7 @@ const customStyles = {
 };
 
 const UpdateProjectModal = (props) => {
-  const { handleUpdateProject, projectId, selectedProject } = props;
+  const { handleUpdateProject, projectId, selectedProject, handleGetProject } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -53,15 +53,14 @@ const UpdateProjectModal = (props) => {
           fd.append('main_image', photo);
         })
       }
-      handleUpdateProject(projectId, fd);
+      handleUpdateProject(projectId, fd).then(handleGetProject(projectId));
     }
 
     else {
-      handleUpdateProject(projectId, values);
+      handleUpdateProject(projectId, values).then(handleGetProject(projectId));
     }
 
     closeModal();
-    // window.location.reload();
   }
 
   const initialValues = {
