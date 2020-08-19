@@ -41,8 +41,8 @@ const DeleteObjectModal = (props) => {
         setIsOpen(false);
     }
     
-    const onModalSubmit = (ObjectId) => {
-        handleDeleteObject(ObjectId);
+    const onModalSubmit = (objectId) => {
+        handleDeleteObject(objectId);
         closeModal();
         window.location.replace('/for-sale');
     }

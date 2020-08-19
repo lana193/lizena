@@ -29,7 +29,7 @@ const customStyles = {
 };
 
 const AddObjectModal = (props) => {
-  const { handleCreateObject } = props;
+  const { handleCreateObject, handleGetObjects } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
   
   const openModal= () => {
@@ -39,7 +39,6 @@ const AddObjectModal = (props) => {
   let subtitle;
   const afterOpenModal = () => {
     // references are now sync'd and can be accessed.
-    // subtitle.style.color = 'black';
     subtitle.style.padding = '10px';
     subtitle.style.fontFamily = 'Raleway, sans-serif';
     subtitle.style.fontSize = '20px';
@@ -55,6 +54,7 @@ const AddObjectModal = (props) => {
     console.log(1010, values);
     fd.append('object_name', values.object_name);
     fd.append('description', values.description);
+    fd.append('subtitle', values.subtitle);
     fd.append('metres', values.metres);
     fd.append('rooms', values.rooms);
     fd.append('bathrooms', values.bathrooms);
