@@ -98,8 +98,8 @@ const Footer = () => {
                     <p className='footer-p'>м. Львів, вул. Богданівська, 11а</p>
                 </div>
                 <div className='social-icons'>
-                    <FacebookIcon />
-                    <InstagramIcon /> 
+                    <a href='https://www.facebook.com/lizenabud/?modal=admin_todo_tour'><FacebookIcon /></a>
+                    <a href='https://www.instagram.com/lizenabud_lviv/?igshid=1vm6luqm2cl0l'><InstagramIcon /></a>
                 </div>
             </div>
         </FooterContainer>

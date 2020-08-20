@@ -19,11 +19,9 @@ export const H2 = styled.h2`
     text-align: center;
     text-transform: uppercase;
 
-    @media only screen and (max-width: 767.98px){
-         {
-            font-size: 30px;
-        }
-
+    @media only screen and (max-width: 767.98px) {
+        font-size: 30px;
+    }
 `;
 
 
@@ -36,10 +34,9 @@ export const H3 = styled.h3`
     text-align: center;
     text-transform: uppercase;
 
-    @media only screen and (max-width: 767.98px){
-         {
-            font-size: 25px;
-        }
+    @media only screen and (max-width: 767.98px) {
+        font-size: 25px;
+    }
 
 `;
 
@@ -47,48 +44,37 @@ export const P1 = styled.p`
    font-family: 'Montserrat', sans-serif;
    font-size: 1em;
    font-weight: 500;
-//    letter-spacing: 0.1em;
-padding: 20px 10px;
-
-    @media screen only and ()
+   padding: 20px 10px;
 `;
 
 export const P2 = styled.p`
    font-family: 'Montserrat', sans-serif;
    font-size: 1.2em;
    font-weight: 500;
-//    letter-spacing: 0.1em;
-padding: 20px 10px;
-
-    @media screen only and ()
+   padding: 20px 10px;
 `;
 
 
 
 export const H4 = styled.h4`
-    // font-family: 'Comic Neue', cursive;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 22px;
     font-weight: 600px;
     color: ${(props) => props.theme.colors.darkslategray};
     padding: 1em;
-    // text-transform: uppercase;
     margin: 0;
 `;
 
 export const H4white = styled.h4`
-    // font-family: 'Comic Neue', cursive;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 22px;
     font-weight: 500px;
     color: ${(props) => props.theme.colors.aliceBlue};
     padding: 0.3em 1.5em;
-    // text-transform: uppercase;
     margin: 0;
 `;
 
 export const H5 = styled.h5`
-    font-family: 'Didact Gothic', sans-serif;
     font-family: 'Comic Neue', cursive;
     font-size: 23px;
     font-weight: 600px;

@@ -5,13 +5,9 @@ import AddObjectForm from './AddObjectForm';
 import { SmallButton } from '../../elements';
 import styled from 'styled-components';
 
-const currentUserToken = localStorage.getItem('jwtToken');
-  console.log(999, currentUserToken);
-
 const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
-  // padding-top: 10%;
 `;
  
 const customStyles = {
@@ -29,7 +25,7 @@ const customStyles = {
 };
 
 const AddObjectModal = (props) => {
-  const { handleCreateObject, handleGetObjects } = props;
+  const { handleCreateObject } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
   
   const openModal= () => {

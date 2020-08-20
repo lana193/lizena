@@ -42,12 +42,16 @@ const ContactsContainer = styled.div`
             padding-top: 2em;
             .contact-wrapper {
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 padding: 2% 0;
 
                 .contact-info {
                     margin-left: 8px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    span {
+                        font-family: 'Montserrat', sans-serif;
+                    }
                 }
             }
 
@@ -124,7 +128,7 @@ const Contacts = (props) => {
                     </div>
                     <div className='contact-wrapper'>
                         <PhoneRoundIcon />
-                        <P1 className='contact-info'>+38 (067) 90 44 630, +38 (097) 66 08 663</P1>
+                        <P1 className='contact-info'><span>+38 (067) 90 44 630,</span><span>+38 (097) 66 08 663</span></P1>
                     </div>
                     <div className='contact-wrapper'>
                         <LocationRoundIcon />
@@ -135,11 +139,13 @@ const Contacts = (props) => {
                         <hr className='contacts-hr'/>
                         <H5>Знайдіть нас у соціальних мережах!</H5>
                         <div className='social'>
-                            <img className='social-img' src={facebook} alt='Ми у фейсбуці'/>
-                            <img className='social-img' src={instagram} alt='Ми в інстаграм'/>
+                            <a href='https://www.facebook.com/lizenabud/?modal=admin_todo_tour'>
+                                <img className='social-img' src={facebook} alt='Lizena facebook'/>
+                            </a>
+                            <a href='https://www.instagram.com/lizenabud_lviv/?igshid=1vm6luqm2cl0l'>
+                                <img className='social-img' src={instagram} alt='Lizena instagram'/>
+                            </a>
                         </div>
-
-
                     </div>
                     
                 </div>
