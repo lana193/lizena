@@ -30,6 +30,14 @@ const AddObjectForm = (props) => {
                     />
 
                     <Field
+                        name='conclusion'
+                        component={TextAreaField}
+                        type='textarea'
+                        placeholder='Підсумок'
+                        label='Підсумок'
+                    />
+
+                    <Field
                         name='metres'
                         component={InputField}
                         type='number'

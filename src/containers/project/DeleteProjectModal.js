@@ -41,10 +41,10 @@ const DeleteProjectModal = (props) => {
         setIsOpen(false);
     }
     
-    const onModalSubmit = (projectId) => {
-        handleDeleteProject(projectId);
+    const onModalSubmit = async(projectId) => {
+        const isProjectDeleted = await handleDeleteProject(projectId);
         closeModal();
-        window.location.replace('/projects');
+        (window.location.replace('/projects'));
     }
     
     return (
@@ -62,7 +62,7 @@ const DeleteProjectModal = (props) => {
             <h2 ref={_subtitle => (subtitle = _subtitle)}>Ви впевнені, що хочете видалити проєкт?</h2>
             <ButtonWrapper>
               <SmallButton danger width='320px' name='Так' onClick={()=> onModalSubmit(projectId)}/>
-              <SmallButton width='320px' name='Ні' onClick={closeModal}/>
+              <SmallButton width='320px' name='Ні' onClick={closeModal} />
             </ButtonWrapper>
           </Modal>
         </div>

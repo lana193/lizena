@@ -113,43 +113,47 @@ const ObjectWrapper = styled.div`
 
 const ObjectForSale = (props) => {
     const { handleGetObject, match, selectedObject, handleDeleteObject, handleUpdateObject } = props;
-    const currentUserToken = localStorage.getItem('jwtToken');
+    const currentUserToken = localStorage && localStorage.getItem('jwtToken');
 
     useEffect(() => {
-            handleGetObject(match.params.id)
+        handleGetObject(match.params.id)
     }, [handleGetObject, match.params.id])
 
-    return(
-        <ObjectWrapper background={selectedObject.main_image}>
-            <div className='object-main-info'>
-                <div className='object-title'>
-                    <p className='p-title'>{selectedObject.object_name} • {selectedObject.metres} м<sup>2</sup></p>
-                </div>
-                <div className='object-price'>
-                    <p className='p-price'> {selectedObject.price} $</p>
-                </div>
-            </div>
-            <div className='object-desc'>
-                <H3>Опис котеджу</H3>
-                <P2>{selectedObject.description}</P2>
-            </div>
-            <div className='gallery-wrapper'>
-            <H3>Галерея</H3>
-            <div className='gallery'>
-                <ProjectGallery photos={selectedObject.photos}/>
-            </div>
-            </div>
-            
-            { currentUserToken && 
-                <div>
-                    <UpdateObjectModal 
-                        handleUpdateObject={handleUpdateObject} 
-                        objectId={match.params.id} 
-                        selectedObject={selectedObject}
-                        handleGetObject={handleGetObject}
-                     />
-                    <DeleteObjectModal handleDeleteObject={handleDeleteObject} objectId={match.params.id} />
-                </div>
+    return (
+        <ObjectWrapper background={selectedObject && selectedObject.main_image}>
+            {selectedObject &&
+                <>
+                    <div className='object-main-info'>
+                        <div className='object-title'>
+                            <p className='p-title'>{selectedObject.object_name} • {selectedObject.metres} м<sup>2</sup></p>
+                        </div>
+                        <div className='object-price'>
+                            <p className='p-price'> {selectedObject.price} $</p>
+                        </div>
+                    </div>
+                    <div className='object-desc'>
+                        <H3>Опис котеджу</H3>
+                        <P2>{selectedObject.description}</P2>
+                    </div>
+                    <div className='gallery-wrapper'>
+                        <H3>Галерея</H3>
+                        <div className='gallery'>
+                            <ProjectGallery photos={selectedObject.photos} />
+                        </div>
+                    </div>
+
+                    {currentUserToken &&
+                        <div>
+                            <UpdateObjectModal
+                                handleUpdateObject={handleUpdateObject}
+                                objectId={match.params.id}
+                                selectedObject={selectedObject}
+                                handleGetObject={handleGetObject}
+                            />
+                            <DeleteObjectModal handleDeleteObject={handleDeleteObject} objectId={match.params.id} />
+                        </div>
+                    }
+                </>
             }
         </ObjectWrapper>
     )

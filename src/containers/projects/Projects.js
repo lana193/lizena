@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import ProjectCard from './ProjectCard';
 import AddProjectModal from './AddProjectModal';
 
 const ProjectsContainer = styled.div`
-    padding-top: 100px;
+    padding-top: 60px;
     width: 100%;
     @media only screen and (max-width: 767.98px) {
         padding-top: 60px;
@@ -31,15 +32,19 @@ const Projects = ({
     selectedProjects
 }) => {
 
-    const currentUserToken = localStorage.getItem('jwtToken');
+    const currentUserToken = localStorage && localStorage.getItem('jwtToken');
 
     useEffect(() => {
-        handleGetProjects();
-    }, [handleGetProjects])
-
+        !selectedProjects.length && handleGetProjects();
+    }, [handleGetProjects, selectedProjects.length])
+  
     return (
         <ProjectsContainer>
-            {currentUserToken && <AddProjectModal handleCreateProject={handleCreateProject} />}
+            <Helmet>
+                <title>Лізена | Наші роботи</title>
+                <meta name='description' content='Лізена - наші роботи | Ремонтно-будівельні роботи, Львів' />
+            </Helmet>
+            {currentUserToken && <AddProjectModal handleCreateProject={handleCreateProject} handleGetProjects={handleGetProjects} />}
             <div className='projects-wrapper'>
                 {selectedProjects.map((item, i) => (
                     <ProjectCard key={i} {...item} />

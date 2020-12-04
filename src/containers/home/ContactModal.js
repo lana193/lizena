@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../../components/contact-us/ContactForm';
 import { SmallButton, BigButton} from '../../elements';
 
 const customStyles = {
@@ -17,6 +17,7 @@ const customStyles = {
 };
 
 const ContactModal = (props) => {
+  const { handleSendMessage } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -36,8 +37,10 @@ const ContactModal = (props) => {
   }
 
   const handleSubmit = (values) => {
-    closeModal();
-    window.location.reload();
+    // handleSendMessage(values).then(()=> closeModal());
+    handleSendMessage(values);
+    // closeModal();
+
   }
 
   return (
@@ -53,7 +56,7 @@ const ContactModal = (props) => {
         contentLabel='Send Message Modal'
       >
         <h2 ref={_subtitle => (subtitle = _subtitle)}>Замовити консультацію</h2>
-        <ContactForm onSubmit={handleSubmit} />
+        <ContactForm onSubmit={handleSubmit} closeContactModal={closeModal}/>
         <SmallButton danger name='Скасувати' onClick={closeModal} />
       </Modal>
     </div>

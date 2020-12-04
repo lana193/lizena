@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import logo from './logo.png';
 
-import { LocationIcon, EmailIcon, PhoneIcon, FacebookIcon, InstagramIcon } from '../icons/Icons';
+import { LocationIcon, EmailIcon, PhoneIcon, FacebookIcon, InstagramIcon } from '../../icons/Icons';
 
 const FooterContainer = styled.div`
     min-height: 200px;

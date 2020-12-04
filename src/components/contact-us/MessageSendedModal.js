@@ -21,15 +21,10 @@ const customStyles = {
   }
 };
 
-const DeleteObjectModal = (props) => {
-    const { handleDeleteObject, objectId } = props;
-    
-    const [modalIsOpen, setIsOpen] = useState(false);
-    
-    const openModal = () => {
-        setIsOpen(true);
-    }
-    
+const MessageSendedModal = (props) => {
+    const { showModal, closeContactModal } = props;
+    const [modalIsOpen, setIsOpen] = useState(showModal);
+
     let subtitle;
     const afterOpenModal = () => {
       subtitle.style.padding = '20px';
@@ -38,18 +33,12 @@ const DeleteObjectModal = (props) => {
     }
     
     const closeModal = () => {
+        closeContactModal()
         setIsOpen(false);
-    }
-    
-    const onModalSubmit = async (objectId) => {
-        const deletedProject = await handleDeleteObject(objectId);
-        closeModal();
-        window.location.replace('/for-sale');
     }
     
     return (
         <div>
-          <SmallButton danger name='Видалити' onClick={openModal}/>
           <Modal
             appElement={document.getElementById('app')}
             isOpen={modalIsOpen}
@@ -57,16 +46,15 @@ const DeleteObjectModal = (props) => {
             onRequestClose={closeModal}
             style={customStyles}
             ariaHideApp={false}
-            contentLabel='Delete Object Modal'
+            contentLabel='Message sended modal'
           >
-            <h2 ref={_subtitle => (subtitle = _subtitle)}>Ви впевнені, що хочете видалити об'єкт?</h2>
+            <h2 ref={_subtitle => (subtitle = _subtitle)}>Дякуємо, що написали нам. Ми відповімо на Ваше повідомлення найближчим часом</h2>
             <ButtonWrapper>
-              <SmallButton danger width='320px' name='Так' onClick={()=> onModalSubmit(objectId)}/>
-              <SmallButton width='320px' name='Ні' onClick={closeModal}/>
+              <SmallButton width='320px' name='Гаразд' onClick={closeModal}/>
             </ButtonWrapper>
           </Modal>
         </div>
   );
 }
 
-export default  DeleteObjectModal;
+export default  MessageSendedModal;

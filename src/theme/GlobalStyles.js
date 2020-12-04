@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
 body {
   margin: 0;
@@ -14,12 +14,12 @@ body {
 }
 
   * { 
-      margin: 0; 
-      padding: 0; 
-      font-family: 'Open Sans', sans-serif;
-      color: rgb(71, 71, 71);
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(71, 71, 71);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
   }

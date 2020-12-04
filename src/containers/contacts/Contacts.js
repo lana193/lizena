@@ -1,7 +1,8 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import ContactForm from './ContactForm';
+import ContactForm from '../../components/contact-us/ContactForm';
 import { P1, H5, H3, H4 } from '../../theme/StyledElements';
 import background from './contact-us.jpg';
 import { EnvelopeRoundIcon, PhoneRoundIcon, LocationRoundIcon } from '../../icons/Icons';
@@ -111,13 +112,18 @@ const ContactsContainer = styled.div`
 `;
 
 const Contacts = (props) => {
-    const {handleSendMessage} = props;
+    const { handleSendMessage } = props;
 
     const handleSubmit = (values) => {
+        console.log(2323, values);
         handleSendMessage(values);
     }
     return (
         <ContactsContainer>
+            <Helmet>
+                <title>Лізена | Контакти</title>
+                <meta name='description' content='Лізена - Контакти | тел.: +38 (067) 90 44 630, +38 (097) 66 08 663, email: lizenabud@gmail.com, м. Львів, вул. Богданівська, 11а' />
+            </Helmet>
             <div className='contacts-background'></div>
             <div className='contacts-wrapper'>
                 <div className='contacts-column-first'>

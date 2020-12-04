@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.png';
 import { Link } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
@@ -24,15 +23,6 @@ const NavBarContainer = styled.nav`
     .nav-right {
         display: flex;
         justify-content: flex-end;
-
-        .logo-wrapper {
-            height: 70px;
-            width: 180px;
-            background-image: url(${logo});
-            background-size: 140px;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
     }
 
     .nav-link {
@@ -100,8 +90,8 @@ const NavBar = () => {
     return (
         <NavBarContainer >
             <div className='nav-left'>
-                <Link to='/' className =''>
-                    <HomeIcon alt='Головна'/>
+                <Link to='/' title='Головна'>
+                    <HomeIcon />
                 </Link>         
                 <div className='phone_wrapper'>
                     +38 (067) 90 44 630, <br/>

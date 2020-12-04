@@ -25,6 +25,14 @@ const AddProjectForm = (props) => {
                         label='Опис проєкту'
                     />
 
+                    <Field
+                        name='conclusion'
+                        component={TextAreaField}
+                        type='textarea'
+                        placeholder='Підсумок'
+                        label='Підсумок'
+                    />
+
                     <Field 
                         name='main_image' 
                         label='Головне зображення' 

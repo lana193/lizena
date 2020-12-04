@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import styled from 'styled-components';
 
@@ -57,11 +58,14 @@ const ServicesWrapper = styled.div`
 const Services = () => {
     return (
         <ServicesWrapper>
+            <Helmet>
+                <title>Лізена | Послуги та розцінки</title>
+                <meta name='description' content='Лізена - Спектр послуг | Ремонтно-будівельні послуги, Львів' />
+            </Helmet>
             <H3>Спектр послуг</H3>
             <div className='service-info'>
                 <P2>Компанія Лізена надає широкий спектр будівельних послуг, серед них весь перелік внутрішніх ремонтних робіт, робота з фасадом, встановлення сантехніки та проведення електрики. У нас Ви можете замовити, як дрібні будівельні роботи, так і ремонт "з нуля".</P2>
                 <P2>За необхідності ми допоможемо Вам з проектуванням, а наші дизайнери розроблять для Вас макет приміщення, з врахуванням Ваших побажань</P2>
-                
             </div>
             <H3>Ремонтні послуги</H3>
             <P2>Якщо Вас цікавить ремонт приміщення, Ви можете обрати один з запропонованих пакетів:</P2>
@@ -70,19 +74,21 @@ const Services = () => {
                     name='Економ'
                     price='2600 грн.'
                     description='Ремонт за доступними цінами'
-                    works={works.repairEconomy}
+                    worksAvl={works.repairEconomyAvl}
+                    worksClosed={works.repairEconomyClosed}
                 />
                 <ServicePackage
                     name='Стандарт'
                     price='3000 грн.'
                     description='Пакет включає усі основні роботи'
-                    works={works.repairEconomy}
+                    worksAvl={works.repairStandartAvl}
+                    worksClosed={works.repairStandartClosed}
                 />
                 <ServicePackage
                     name='Преміум'
                     price='3600 грн.'
                     description='Ремонт з дотриманням найвищих стандартів'
-                    works={works.repairEconomy}
+                    worksAvl={works.repairPremiumAvl}
                 />
             </div>
 
@@ -92,25 +98,28 @@ const Services = () => {
                     name='Базовий'
                     price='300 $'
                     description='Базовий пакет будівництва'
-                    works={works.buildBase}
+                    worksAvl={works.buildBaseAvl}
+                    worksClosed={works.buildBaseClosed}
                 />
                 <ServicePackage
                     name='Стандарт'
                     price='350 $'
                     description='Включає в себе всі основні роботи'
-                    works={works.buildStandart}
+                    worksAvl={works.buildStandartAvl}
+                    worksClosed={works.buildStandartClosed}
                 />
                 <ServicePackage
                     name='Комплексний'
                     price='430 $'
                     description='Розширений пакет будівництва'
-                    works={works.buildComplex}
+                    worksAvl={works.buildComplexAvl}
+                    worksClosed={works.buildComplexClosed}
                 />
                 <ServicePackage
                     name='Максимальний'
                     price='500 $'
                     description='Максимальний пакет будівництва'
-                    works={works.buildMaximum}
+                    worksAvl={works.buildMaximumAvl}
                 />
 
             </div>

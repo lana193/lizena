@@ -5,9 +5,6 @@ import AddProjectForm from './AddProjectForm';
 import { SmallButton } from '../../elements';
 import styled from 'styled-components';
 
-const currentUserToken = localStorage.getItem('jwtToken');
-  console.log(999, currentUserToken);
-
 const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +23,7 @@ const customStyles = {
 };
 
 const AddProjectModal = (props) => {
-  const { handleCreateProject } = props;
+  const { handleCreateProject, handleGetProjects } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
   
   const openModal= () => {
@@ -61,13 +58,13 @@ const AddProjectModal = (props) => {
       })  
     }
     
-    handleCreateProject(fd);
+    handleCreateProject(fd).then(() => handleGetProjects());;
     closeModal();
 }
 
 return (
-  <ModalWrapper> <div></div>
-    <SmallButton name='Додати новий проєкт' onClick={openModal} width='300px'/>
+  <ModalWrapper>
+    <SmallButton name='Додати нову роботу' onClick={openModal} width='300px'/>
     <Modal
       appElement={document.getElementById('app')}
       ariaHideApp={false}
@@ -77,9 +74,9 @@ return (
       style={customStyles}
       contentLabel='Add Project Modal'
     >
-      <h2 ref={_subtitle => (subtitle = _subtitle)}>Додати новий проєкт</h2>
-      <AddProjectForm onSubmit={handleSubmit}/>
-      <SmallButton danger name='Скасувати' onClick={closeModal}/>
+      <h2 ref={_subtitle => (subtitle = _subtitle)}>Додати нову роботу</h2>
+        <AddProjectForm onSubmit={handleSubmit}/>
+        <SmallButton danger name='Скасувати' onClick={closeModal}/>
       </Modal>
     </ModalWrapper>
   );

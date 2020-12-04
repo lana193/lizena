@@ -28,7 +28,7 @@ export const logInAsAdmin = (userData) => dispatch => {
       // Set token to localStorage
       const { token } = res.data;
       console.log(8888, res.data.role)
-      if (res.data.success === true && res.data.role === 'Admin') {
+      if (res.data.success === true && res.data.role === 'Admin' && localStorage) {
         localStorage.setItem("jwtToken", token);
         // Set token to Auth header
         setAuthToken(`Bearer ${token}`);
@@ -67,7 +67,7 @@ export const setCurrentUser = (decoded) => {
 // Log user out
 export const logOutUser = () => dispatch => {
   // Remove token from local storage
-  localStorage.removeItem("jwtToken");
+  localStorage && localStorage.removeItem("jwtToken");
   // Remove auth header for future requests
   setAuthToken(false);
   // Set current user to empty object {}

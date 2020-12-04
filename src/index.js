@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+// import { render } from 'react-snapshot';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import Modal from 'react-modal';
 // import configureStore from './store/configureStore';
-
+// import 'localstorage-polyfill'
 import store from './store';
 
 

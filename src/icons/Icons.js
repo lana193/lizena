@@ -156,20 +156,6 @@ export const PhoneIcon = () => {
 
 }
 
-// export const RightArrow = () => {
-//     return (
-//         <Icon xmlns="http://www.w3.org/2000/svg" width="50" height="47.56" viewBox="0 0 50 47.56">
-//     <title>Forward_2</title>
-//     <g id="Layer_2" data-name="Layer 2">
-//         <g id="Forward_2">
-//             <path class="cls-1" d="M49.68 21.5a1.83 1.83 0 0 1 .13.24c0 .08 0 .17.08.25a1.66 1.66 0 0 1 .06.21 2.69 2.69 0 0 1 0 1 1.29 1.29 0 0 1-.06.21c0 .09 0 .18-.08.26s-.08.16-.13.24a1.74 1.74 0 0 1-.1.19 2.52 2.52 0 0 1-.69.69l-.2.11a2.53 2.53 0 0 1-.23.12 2.58 2.58 0 0 1-.26.08l-.21.06a2 2 0 0 1-.49.05h-45a2.5 2.5 0 0 1 0-5h39L25.54 4.27A2.5 2.5 0 0 1 29.08.73l20.19 20.19a3 3 0 0 1 .31.39 1.74 1.74 0 0 1 .1.19z"/>
-//             <rect class="cls-2" x="21.45" y="34.87" width="26.73" height="5" rx="2.5" ry="2.5" transform="rotate(-45 34.822 37.376)"/>
-//             </g></g>
-//     </Icon>
-
-//     );
-// }
-
 const StyledRoundIcon = styled.svg`
     -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); 
     width: 45px;
@@ -328,14 +314,6 @@ export const KeyIcon = () => {
 }
 
 
-// export const RightArrow = () => {
-//     return (
-//         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
-//             <path d="M11 16.5V13H3V7h8V3.5l6.5 6.5l-6.5 6.5z" fill="white"/>
-//             </svg>
-//     );
-// }
-
 const StyledRightArrow = styled.svg`
     margin-bottom: -7px;
 `;
@@ -349,4 +327,12 @@ export const RightArrow = () => {
     );
 }
 
- 
+// xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19L21 7l-1.4-1.4L9 16.2z"
+
+// export const DoneIcon = () => {
+//     return (
+//         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+//             <path d="M9 16.2L4.8 12l-1.4 1.4L9 19L21 7l-1.4-1.4L9 16.2z" fill="#626262"/>
+//         </svg>
+//     );
+// }

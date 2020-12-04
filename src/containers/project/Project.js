@@ -20,32 +20,36 @@ const ProjectWrapper = styled.div`
 
 const Project = (props) => {
     const { handleGetProject, match, selectedProject, handleDeleteProject, handleUpdateProject } = props;
-    const currentUserToken = localStorage.getItem('jwtToken');
+    const currentUserToken = localStorage && localStorage.getItem('jwtToken');
 
     useEffect(() => {
-            handleGetProject(match.params.id)
+        handleGetProject(match.params.id)
     }, [handleGetProject, match.params.id])
 
-    return(
+    return (
         <ProjectWrapper>
-            <div className='project-desc'>
-                <H3>{selectedProject.project_name}</H3>
-                <P2>{selectedProject.description}</P2>
-            </div>
-            <H3>Галерея</H3>
-            <div className=''>
-                <ProjectGallery photos={selectedProject.photos}/>
-            </div>
-            { currentUserToken && 
-                <div>
-                    <UpdateProjectModal 
-                        handleUpdateProject={handleUpdateProject} 
-                        projectId={match.params.id} 
-                        selectedProject={selectedProject}
-                        handleGetProject={handleGetProject}
-                    />
-                    <DeleteProjectModal handleDeleteProject={handleDeleteProject} projectId={match.params.id} />
-                </div>
+            {selectedProject &&
+                <>
+                    <div className='project-desc'>
+                        <H3>{selectedProject.project_name}</H3>
+                        <P2>{selectedProject.description}</P2>
+                    </div>
+                    <H3>Галерея</H3>
+                    <div className=''>
+                        <ProjectGallery photos={selectedProject.photos} />
+                    </div>
+                    {currentUserToken &&
+                        <div>
+                            <UpdateProjectModal
+                                handleUpdateProject={handleUpdateProject}
+                                projectId={match.params.id}
+                                selectedProject={selectedProject}
+                                handleGetProject={handleGetProject}
+                            />
+                            <DeleteProjectModal handleDeleteProject={handleDeleteProject} projectId={match.params.id} />
+                        </div>
+                    }
+                </>
             }
         </ProjectWrapper>
     )

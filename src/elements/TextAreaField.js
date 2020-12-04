@@ -1,6 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const TextAreaWrapper = styled.div`
+  text-align: left;
+  span {
+    color: red;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    padding: 0 5px;
+  }
+`;
+
 const StyledTextArea = styled.textarea`
   width: 100%;
   padding: 12px 20px;
@@ -15,15 +26,14 @@ const StyledTextArea = styled.textarea`
   }
 `;
 
-export const TextAreaField = ({ input, label, placeholder, type, meta: { touched, error }}) => {
-  console.log(234, input)
+export const TextAreaField = ({ input, label, placeholder, type, meta: { touched, error, warning }}) => {
   return (
-    <div>
+    <TextAreaWrapper>
       <label>{label}</label>
       <div>
         <StyledTextArea {...input} placeholder={placeholder} type={type} />
-        {touched && error && <span>{error}</span>}
+        {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
       </div>
-    </div>
+    </TextAreaWrapper>
   )
 }

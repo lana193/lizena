@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
+import styled from 'styled-components';
+
 import AddObjectForm from './AddObjectForm';
 import { SmallButton } from '../../elements';
-import styled from 'styled-components';
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const customStyles = {
 };
 
 const AddObjectModal = (props) => {
-  const { handleCreateObject } = props;
+  const { handleCreateObject, handleGetObjects } = props;
   const [modalIsOpen, setIsOpen] = useState(false);
   
   const openModal= () => {
@@ -58,8 +59,10 @@ const AddObjectModal = (props) => {
   
     
     values.photos.forEach(photo => {
-      fd.append('photos', photo);
+      (fd.append('photos', photo));
     })
+
+
 
     if(values.main_image) {
       values.main_image.forEach(photo => {
@@ -67,7 +70,7 @@ const AddObjectModal = (props) => {
       })  
     }
     
-    handleCreateObject(fd);
+    handleCreateObject(fd).then(() => handleGetObjects());
     closeModal();
 }
 

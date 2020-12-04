@@ -13,11 +13,19 @@ const ProjectCardContainer = styled.div`
   align-items: flex-end;
   box-shadow: 10px -3px rgb(60, 179, 113);
 
-  .project-link-wrapper {
+  .project-link {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .project-name-wrapper {
     padding: 10px 20px;
     width: 320px;
-
-    .project-link {
+    
+    .project-name {
       color: white;
       text-transform: uppercase;
     }
@@ -33,9 +41,11 @@ const ProjectCardContainer = styled.div`
 const ProjectCard = (props) => {
   return(
     <ProjectCardContainer imageUrl={props.main_image}>
-      <div className='project-link-wrapper'>
-        <Link className='project-link' to={`/projects/project/${props._id}`}>{props.project_name}</Link>
-      </div>
+      <Link className='project-link' to={`/projects/project/${props._id}`}>
+        <div className='project-name-wrapper'>
+          <p className='project-name'>{props.project_name}</p>
+        </div>
+      </Link>
     </ProjectCardContainer>
   );
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import doneIcon from '../../icons/doneIcon.svg'
+import closeIcon from '../../icons/closeIcon.svg'
+
 const accentColor = 'rgb(60,179,113)';
 const textColor = '#2d3b48';
 const planPadding = "1em";
@@ -8,6 +11,19 @@ const titleBackground = '#f3f3f3';
 const titleSize = '1.45em';
 const priceSize = '1.35em';
 const featureSize = '1em';
+
+const PackageLi = styled.li`
+ 
+    padding: calc(${planPadding} / 2);
+
+::before {
+    content: url(${props => props.available ? doneIcon : closeIcon});
+    color: ${accentColor};
+    display: inline-block; 
+    width: 1.5em;
+    margin-left: -1em
+}
+`;
 
 const PackageWrapper = styled.div`
     background: white;
@@ -70,25 +86,25 @@ const PackageWrapper = styled.div`
             list-style: none;
             padding-left: 0;
 
-            li { 
-                padding: calc(${planPadding} / 2);
-            }
+            // li { 
+            //     padding: calc(${planPadding} / 2);
+            // }
 
-            li::before {
-                content: '•';
-                color: ${accentColor};
-                display: inline-block; 
-                width: 1.5em;
-                margin-left: -1em
-            }
+            // li::before {
+            //     content: url(${doneIcon});
+            //     color: ${accentColor};
+            //     display: inline-block; 
+            //     width: 1.5em;
+            //     margin-left: -1em
+            // }
         }
     }
 `;
 
 const ServicePackage = (props) => {
-    const { name, price, description, works } = props;
+    const { name, price, description, worksAvl, worksClosed } = props;
     return (
-        <PackageWrapper>
+        <PackageWrapper >
             <div className='header'>
                 <h4>{name}</h4>
             </div>
@@ -100,9 +116,14 @@ const ServicePackage = (props) => {
                     <em>{description}</em>
                 </p>
                 <ul className='works-list'>
-                    {works.map(work => {
+                    {worksAvl && worksAvl.map((work, index) => {
                         return (
-                            <li>{work}</li>);
+                            <PackageLi available key={index}>{work}</PackageLi>);
+                        }
+                    )}
+                    {worksClosed && worksClosed.map((work, index) => {
+                        return (
+                            <PackageLi key={index}>{work}</PackageLi>);
                         }
                     )}
                 </ul>

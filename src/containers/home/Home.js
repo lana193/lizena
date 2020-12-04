@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import background from './background.jpg';
@@ -97,13 +98,18 @@ const H1 = styled.h1`
     }
 `;
 
-const Home = () => {
+const Home = (props) => {
+    const { handleSendMessage } = props;
     return (
         <HomePageWrapper>
+            <Helmet>
+                <title>Будівельно-ремонтна компанія Лізена | Головна</title>
+                <meta name='description' content='Будівельно-ремонтна компанія Лізена | Продаж котеджів' />
+            </Helmet>
             <div className='background-container'>
                 <div className='header'>
                     <H1>Будівельно-ремонтна компанія ЛІЗЕНА</H1>
-                    <ContactModal/>
+                    <ContactModal handleSendMessage={handleSendMessage} />
                 </div>
                 <div className='buy-appartment'>
                     <Link to='/for-sale'>

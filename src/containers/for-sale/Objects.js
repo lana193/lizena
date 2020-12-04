@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import ObjectCard from './ObjectCard';
 import AddObjectModal from './AddObjectModal';
 
 const ObjectsContainer = styled.div`
-    padding: 100px 0 150px 0;
+    padding: 70px 0 150px 0;
     width: 100%;
 
     @media only screen and (max-width: 767.98px) {
@@ -22,18 +23,23 @@ const ObjectsContainer = styled.div`
 const Objects = ({
     handleGetObjects,
     handleCreateObject,
+    handleGetObject,
     selectedObjects
 }) => {
 
-    const currentUserToken = localStorage.getItem('jwtToken');
+    const currentUserToken = localStorage && localStorage.getItem('jwtToken');
 
     useEffect(() => {
-        handleGetObjects();
-    }, [handleGetObjects])
+        !selectedObjects.length && handleGetObjects();
+    }, [handleGetObjects, selectedObjects.length])
 
     return (
         <ObjectsContainer>
-            { currentUserToken && <AddObjectModal handleCreateObject={handleCreateObject} />}
+            <Helmet>
+                <title>Лізена | Об'єкти під продаж</title>
+                <meta name='description' content='Будівельно-ремонтна компанія Лізена | Продаж котеджів Львів' />
+            </Helmet>
+            { currentUserToken && <AddObjectModal handleCreateObject={handleCreateObject} handleGetObjects={handleGetObjects}/>}
                 <div className='objects-wrapper'>
                     { selectedObjects.map((item, i) => (
                         <ObjectCard key={i} {...item} />

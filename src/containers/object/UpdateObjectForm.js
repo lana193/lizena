@@ -4,10 +4,10 @@ import { Field, Form, reduxForm } from 'redux-form';
 import { InputField, TextAreaField, SmallButton, FileInputField } from '../../elements';
 
 const UpdateObjectForm = (props) => {
-    const { handleSubmit } = props;
+    const { handleSubmit, initialValues } = props;
     return (
         <div>
-            <Form onSubmit={handleSubmit} encType='multipart/form-data'>
+            <Form onSubmit={handleSubmit} initialValues={initialValues} >
                 <div className='form-container'>
                     <Field
                         name='object_name'
@@ -31,6 +31,14 @@ const UpdateObjectForm = (props) => {
                         type='textarea'
                         placeholder="Опис об'єкту"
                         label="Опис об'єкту"
+                    />
+
+                    <Field
+                        name='conclusion'
+                        component={TextAreaField}
+                        type='textarea'
+                        placeholder='Підсумок'
+                        label='Підсумок'
                     />
 
                     <Field
